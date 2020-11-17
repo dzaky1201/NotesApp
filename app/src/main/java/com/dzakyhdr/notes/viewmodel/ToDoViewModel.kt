@@ -25,6 +25,7 @@ class ToDoViewModel(application: Application): AndroidViewModel(application) {
         sortByLowPriority = repository.sortByLowPriority
     }
 
+    //insert
     fun insertData(toDoData: ToDoData){
         viewModelScope.launch(Dispatchers.IO){
             repository.insertData(toDoData)
